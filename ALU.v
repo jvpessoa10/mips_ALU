@@ -11,8 +11,12 @@ begin
 	case(ALUOp)
 	4'b0000:
 		ALUOut <= a+b;
-	4'b0001:
+	4'b0010:
 		ALUOut <= a-b;
+	4'b0100:
+		ALUOut <= a && b;
+	4'b0101:
+		ALUOut <= a || b;
 	endcase
 
 end	
